@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDisplayName</key>
+	<string>Apple Notes</string>
+	<key>CFBundleExecutable</key>
+	<string>Apple Notes Plugin</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.github.terrazzano.QSAppleNotesPlugin</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Apple Notes Plugin</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>10.15</string>
+	<key>QSActions</key>
+	<dict>
+		<key>QSAppleNotesOpenNote</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSAppleNotesActions</string>
+			<key>actionSelector</key>
+			<string>openNote:</string>
+			<key>alternateAction</key>
+			<string>QSAppleNotesShowNote</string>
+			<key>description</key>
+			<string>Open the note in its own Notes window</string>
+			<key>directTypes</key>
+			<array>
+				<string>com.apple.Notes.note</string>
+			</array>
+			<key>icon</key>
+			<string>com.apple.Notes</string>
+			<key>name</key>
+			<string>Open in New Window</string>
+			<key>precedence</key>
+			<string>3.0</string>
+		</dict>
+		<key>QSAppleNotesShowFolder</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSAppleNotesActions</string>
+			<key>actionSelector</key>
+			<string>showFolder:</string>
+			<key>description</key>
+			<string>Select the folder in the main Notes window</string>
+			<key>directTypes</key>
+			<array>
+				<string>com.apple.Notes.folder</string>
+			</array>
+			<key>icon</key>
+			<string>com.apple.Notes</string>
+			<key>name</key>
+			<string>Show in Notes</string>
+			<key>precedence</key>
+			<string>3.0</string>
+		</dict>
+		<key>QSAppleNotesShowNote</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSAppleNotesActions</string>
+			<key>actionSelector</key>
+			<string>showNote:</string>
+			<key>alternateAction</key>
+			<string>QSAppleNotesOpenNote</string>
+			<key>description</key>
+			<string>Select the note in the main Notes window</string>
+			<key>directTypes</key>
+			<array>
+				<string>com.apple.Notes.note</string>
+			</array>
+			<key>icon</key>
+			<string>com.apple.Notes</string>
+			<key>name</key>
+			<string>Show in Notes</string>
+			<key>precedence</key>
+			<string>2.0</string>
+		</dict>
+	</dict>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>terrazzano (code written by Claude Code)</string>
+		<key>categories</key>
+		<array>
+			<string>Applications</string>
+		</array>
+		<key>description</key>
+		<string>Find and open your Apple Notes by title</string>
+		<key>extendedDescription</key>
+		<string>&lt;h2&gt;Catalog&lt;/h2&gt;
+&lt;p&gt;Adds the titles of your notes and your Notes folders to the catalog. Note contents are never read.&lt;/p&gt;
+&lt;p&gt;Titles are read from Notes while it is running. When Notes is closed, Quicksilver uses the last list it saw, so it never launches Notes in the background (except once, the very first time).&lt;/p&gt;
+&lt;p&gt;Select Notes or a Notes folder and press → to browse. Notes inside a folder are listed most recently edited first, and recently edited notes rank a little higher in searches.&lt;/p&gt;
+&lt;h2&gt;Actions&lt;/h2&gt;
+&lt;h4&gt;Open in New Window&lt;/h4&gt;
+&lt;p&gt;Opens the note in its own Notes window. This is the default action.&lt;/p&gt;
+&lt;h4&gt;Show in Notes&lt;/h4&gt;
+&lt;p&gt;Selects the note or folder in the main Notes window.&lt;/p&gt;
+&lt;h2&gt;Permissions&lt;/h2&gt;
+&lt;p&gt;The first time, macOS asks whether Quicksilver may control Notes. Allow it, or change it later in System Settings → Privacy &amp;amp; Security → Automation.&lt;/p&gt;</string>
+		<key>icon</key>
+		<string>com.apple.Notes</string>
+		<key>relatedBundles</key>
+		<array>
+			<string>com.apple.Notes</string>
+		</array>
+	</dict>
+	<key>QSPresetAdditions</key>
+	<array>
+		<dict>
+			<key>ID</key>
+			<string>QSPresetAppleNotesGroup</string>
+			<key>children</key>
+			<array>
+				<dict>
+					<key>ID</key>
+					<string>QSPresetAppleNotesNotes</string>
+					<key>icon</key>
+					<string>com.apple.Notes</string>
+					<key>name</key>
+					<string>Notes</string>
+					<key>source</key>
+					<string>QSAppleNotesSource</string>
+				</dict>
+				<dict>
+					<key>ID</key>
+					<string>QSPresetAppleNotesFolders</string>
+					<key>icon</key>
+					<string>com.apple.Notes</string>
+					<key>name</key>
+					<string>Folders</string>
+					<key>source</key>
+					<string>QSAppleNotesSource</string>
+				</dict>
+			</array>
+			<key>icon</key>
+			<string>com.apple.Notes</string>
+			<key>name</key>
+			<string>Apple Notes</string>
+			<key>requiresBundle</key>
+			<string>com.apple.Notes</string>
+			<key>source</key>
+			<string>QSGroupObjectSource</string>
+		</dict>
+	</array>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSActionProviders</key>
+		<dict>
+			<key>QSAppleNotesActions</key>
+			<string>QSAppleNotesActions</string>
+		</dict>
+		<key>QSBundleChildHandlers</key>
+		<dict>
+			<key>com.apple.Notes</key>
+			<string>QSAppleNotesSource</string>
+		</dict>
+		<key>QSObjectHandlers</key>
+		<dict>
+			<key>com.apple.Notes.folder</key>
+			<string>QSAppleNotesSource</string>
+			<key>com.apple.Notes.note</key>
+			<string>QSAppleNotesSource</string>
+		</dict>
+		<key>QSObjectSources</key>
+		<dict>
+			<key>QSAppleNotesSource</key>
+			<string>QSAppleNotesSource</string>
+		</dict>
+		<key>QSTypeDefinitions</key>
+		<dict>
+			<key>com.apple.Notes.folder</key>
+			<dict>
+				<key>icon</key>
+				<string>com.apple.Notes</string>
+				<key>name</key>
+				<string>Notes Folder</string>
+			</dict>
+			<key>com.apple.Notes.note</key>
+			<dict>
+				<key>icon</key>
+				<string>com.apple.Notes</string>
+				<key>name</key>
+				<string>Note</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>QSRequirements</key>
+	<dict>
+		<key>bundles</key>
+		<array>
+			<dict>
+				<key>id</key>
+				<string>com.apple.Notes</string>
+				<key>name</key>
+				<string>Notes</string>
+			</dict>
+		</array>
+		<key>version</key>
+		<string>4021</string>
+	</dict>
+</dict>
+</plist>
